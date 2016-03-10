@@ -1,0 +1,32 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MouseSpeeder"
+        xmlns:Forms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms" xmlns:Properties="clr-namespace:MouseSpeeder.Properties" x:Class="MouseSpeeder.MainWindow"
+        mc:Ignorable="d"
+        Title="Mouse Speeder" Height="183.333" Width="250" ResizeMode="CanMinimize" Icon="iconp.ico" Margin="0" Opacity="1">
+    <Window.Background>
+        <RadialGradientBrush>
+            <GradientStop Color="#FFF0E683"/>
+            <GradientStop Color="#FF429C34" Offset="1"/>
+        </RadialGradientBrush>
+    </Window.Background>
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <CheckBox x:Name="checkBox" Content="Enable hotkey" HorizontalAlignment="Left" Height="16" Margin="62,77,0,0" VerticalAlignment="Top" Width="100" Checked="checkBox_Checked" Unchecked="checkBox_OnUnchecked" IsChecked="True"/>
+        <GroupBox x:Name="groupBox" Header="Default" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="100" Margin="5,22,0,0">
+            <Slider x:Name="defaultslider" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="90" SmallChange="1" TickPlacement="BottomRight" Maximum="20" Minimum="1" AutoToolTipPlacement="TopLeft" Margin="0,0,-2,0" ValueChanged="defaultslider_ValueChanged" Value="10" LostMouseCapture="Defaultslider_OnLostMouseCapture"/>
+        </GroupBox>
+        <GroupBox x:Name="groupBox_Copy" Header="Changed" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="100" Margin="114,22,0,0">
+            <Slider x:Name="changedslider" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="90" SmallChange="1" TickPlacement="BottomRight" Maximum="20" Value="1" Minimum="1" AutoToolTipPlacement="TopLeft" Margin="0,0,-2,0" LostMouseCapture="Changedslider_OnLostMouseCapture"/>
+        </GroupBox>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="Mouse speed:" VerticalAlignment="Top" Width="214"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52"><Run Text="Hotkey"/><Run Text=":"/></TextBlock>
+        <ComboBox x:Name="comboBox_hotkey" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" Width="116" SelectedIndex="0" DropDownClosed="ComboBox_hotkey_OnDropDownClosed"/>
+        <Rectangle x:Name="rect" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="17" Margin="189,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="25"/>
+    </Grid>
+</Window>
