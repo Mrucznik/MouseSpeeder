@@ -18,7 +18,6 @@ namespace MouseSpeeder
         private const UInt32 SPI_SETMOUSESPEED = 0x0071;
         private static bool applicationState = true;
         private Keys hotkey;
-        private double lol;
 
         [DllImport("User32.dll")]
         static extern Boolean SystemParametersInfo(
@@ -94,7 +93,6 @@ namespace MouseSpeeder
         {
             applicationState = true;
             if (comboBox_hotkey != null) comboBox_hotkey.IsEnabled = true;
-            if (comboBox_hotkey != null) textBlock.Text = "" + lol;
         }
 
         private void checkBox_OnUnchecked(object sender, RoutedEventArgs e)
