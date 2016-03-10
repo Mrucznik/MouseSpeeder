@@ -8,10 +8,10 @@
         mc:Ignorable="d"
         Title="Mouse Speeder" Height="183.333" Width="250" ResizeMode="CanMinimize" Icon="iconp.ico" Margin="0" Opacity="1">
     <Window.Background>
-        <RadialGradientBrush>
-            <GradientStop Color="#FFF0E683"/>
-            <GradientStop Color="#FF429C34" Offset="1"/>
-        </RadialGradientBrush>
+        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            <GradientStop Color="#FFC1C0B6"/>
+            <GradientStop Color="#FF707070" Offset="1"/>
+        </LinearGradientBrush>
     </Window.Background>
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
