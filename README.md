@@ -1,5 +1,5 @@
 # MouseSpeeder
-Application changing mouse speed after click a hotkey
+Application changing mouse speed after click a hotkey, written in C#.
 
 # Releases
-https://github.com/Mrucznik/MouseSpeeder/releases
+[Link](../../releases)
